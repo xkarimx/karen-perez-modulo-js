@@ -1,0 +1,15 @@
+body {
+    background-color: palevioletred;
+}
+header {
+    height: 15vh;
+    background-color: antiquewhite;
+}
+#carrousel {
+    height: 15rem;
+}
+#img img {
+    width: 16rem;
+    height: 10rem;
+    margin: 1rem;
+}
