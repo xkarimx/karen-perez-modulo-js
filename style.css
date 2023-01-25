@@ -26,7 +26,7 @@ h1 {
     height: 150rem;
 }
 #cover {
-    height: 30rem;
+    height: 28rem;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
@@ -37,6 +37,45 @@ footer {
 .red img {
     width: 3rem;
     height: 3rem;
-    border-radius: 50px;
-    
+    border-radius: 50px;   
+}
+.decorate {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+.decorate1 {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 30px;
+}
+.av img {
+    width: 25rem;
+    height: 25rem;
+}
+.av {
+    width: 25rem;
+    height: 25rem;
+    text-align: center;
+    border: 3px solid palevioletred;
+}
+.detail {
+    width: 55rem;
+    height: 30rem;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 30px;
+}
+table, tr, th, td {
+    border: 2px solid palevioletred;
+    border-collapse: collapse;
+}
+table {
+    text-align: center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    border-radius: 30px;
+}
+.max {
+    height: 4rem;
+    background-color: antiquewhite;
 }
