@@ -10,22 +10,47 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body> 
-    <header class="d-flex align-items-center">
-        <img src="./asetts/img/logo.png" class="me-auto p-2 mt-2 ms-3" id="logo" alt="logo">
-        <nav class="me-4">
-            <button type="button" onclick="location.href='./index.html'" class="btn btn-outline-danger p-2">Home</button>
-            <button type="button" onclick="location.href='./upcoming-events.html'" class="btn btn-outline-danger p-2">Upcoming Events</button>
-            <button type="button" onclick="location.href='./past-events.html'" class="btn btn-outline-danger p-2">Past Events</button>
-            <button type="button" onclick="location.href='#'" class="btn btn-outline-danger p-2">Contact</button>
-            <button type="button" onclick="location.href='./stats.html'" class="btn btn-outline-danger p-2">Stats</button>
-        </nav>
-    </header>
+  <header class="d-flex align-items-center">
+    <nav class="navbar fixed-top navbar-expand-md navbar-expand-xl">
+      <div class="container-fluid">
+        <img src="./asetts/img/logo.png" class="navbar-brand me-auto p-2 mt-2 ms-3" id="logo" alt="logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 gap-1">
+              <li class="nav-item">
+                <button type="button" onclick="location.href='index.html'" class="btn btn-outline-danger p-2 w-100">Home</button>
+              </li>
+              <li class="nav-item">
+                <button type="button" onclick="location.href='./upcoming-events.html'" class="btn btn-outline-danger p-2 w-100">Upcoming Events</button>
+              </li>
+              <li class="nav-item">
+                <button type="button" onclick="location.href='./past-events.html'" class="btn btn-outline-danger p-2 w-100">Past Events</button>
+              </li>
+              <li class="nav-item">
+                <button type="button" onclick="location.href='./contact.html'" class="btn btn-outline-danger p-2 w-100">Contact</button>
+              </li>
+              <li class="nav-item">
+                <button type="button" onclick="location.href='./stats.html'" class="btn btn-outline-danger p-2 w-100">Stats</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
     <main class="d-flex justify-content-center align-items-center" >
-        <section class="contain d-flex justify-content-evenly align-items-center w-75 detail">
+        <section class="contain d-flex justify-content-evenly align-items-center flex-column flex-sm-wrap detail">
                 <div class="av">
                     <img src="https://metodika.es/wp-content/uploads/2020/08/2Teatro-REal-Almer%C3%ADa-Capital-Gastronomica-2019-2-copia.jpg" alt="amazing-events">
                 </div>
-                <div class="av d-flex flex-column justify-content-evenly p-2">
+                <div class="av d-flex flex-column justify-content-evenly p-2 box">
                     <h1>Amazing Events</h1>
                     <h4>We are a company with a long history that ensures that events are fun but above all safe.</h4>
                 </div>
