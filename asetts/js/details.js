@@ -20,8 +20,8 @@ function estimateAsistence(item) {
   return muestra;
 }
 
-
-cards.innerHTML = `<div class="card mb-3 card-detail m-sm-3">
+function printCardsDetails (item){
+item.innerHTML = `<div class="card mb-3 card-detail m-sm-3">
 <div class="row gap-3">
   <div class="col-md-4">
     <img src="${dataFind.image}" class="img-fluid rounded-start p-3"  style="max-width: 300px; alt="...">
@@ -40,10 +40,10 @@ cards.innerHTML = `<div class="card mb-3 card-detail m-sm-3">
   </div>
 </div>
 </div>`
+}
 
 
-
-
+printCardsDetails(cards)
 
 
 
