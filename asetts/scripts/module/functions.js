@@ -66,27 +66,27 @@ export function printCardsPast (e, container){
         }
       }
 
-export function printCardDetails (item){
-    item.innerHTML = `<div class="card mb-3 card-detail m-sm-3">
+export function printCardDetails (container, data){
+    container.innerHTML = `<div class="card mb-3 card-detail m-sm-3">
         <div class="row gap-3">
           <div class="col-md-4">
-            <img src="${dataFind.image}" class="img-fluid rounded-start p-3"  style="max-width: 300px; alt="...">
+            <img src="${data.image}" class="img-fluid rounded-start p-3"  style="max-width: 300px; alt="...">
           </div>
           <div class="col-md-8" style="width: 30rem;">
             <div class="card-body m-0 style="width: 15rem;"">
-              <h1 class="card-title text-center">${dataFind.name}</h1>
-              <p class="card-text text-center">${dataFind.description}</p>
-              <p class="card-text ms-4"><small class="text-muted">Date: ${dataFind.date}</small></p>
-              <p class="card-text ms-4"><small class="text-muted">Category: ${dataFind.category}</small></p>
-              <p class="card-text ms-4"><small class="text-muted">Place: ${dataFind.place}</small></p>
-              <p class="card-text ms-4"><small class="text-muted">Capacity: ${dataFind.capacity}</small></p>
-              <p class="card-text ms-4"><small class="text-muted">Asistence: ${estimateAsistence(dataFind)}</small></p>
-              <p class="card-text ms-4"><small class="text-muted">$${dataFind.price}</small></p>
+              <h1 class="card-title text-center">${data.name}</h1>
+              <p class="card-text text-center">${data.description}</p>
+              <p class="card-text ms-4"><small class="text-muted">Date: ${data.date}</small></p>
+              <p class="card-text ms-4"><small class="text-muted">Category: ${data.category}</small></p>
+              <p class="card-text ms-4"><small class="text-muted">Place: ${data.place}</small></p>
+              <p class="card-text ms-4"><small class="text-muted">Capacity: ${data.capacity}</small></p>
+              <p class="card-text ms-4"><small class="text-muted">Asistence: ${estimateAsistence(data)}</small></p>
+              <p class="card-text ms-4"><small class="text-muted">$${data.price}</small></p>
             </div>
           </div>
         </div>
         </div>`
-        }
+}
 
 export function printChecks(list, containerchecks){
     for(let checks of list) {

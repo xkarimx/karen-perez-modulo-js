@@ -11,7 +11,7 @@ const dataFind = data.events.find(card => card._id == id)
 
 
 
-printCardDetails(cards)
+printCardDetails(cards, dataFind)
 
 
 
