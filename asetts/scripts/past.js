@@ -1,8 +1,7 @@
-import { printCards, printChecks, checkboxCategory, filterSearch } from "./asetts/scripts/module/functions.js"
+import { printCardsPast, printChecks, checkboxCategory, filterSearch } from "./module/functions"
 
-
-const cards = document.getElementById("div-cards");
-const info = data.events
+const cards = document.getElementById("div-cards")
+let info = data.events
 
 const check = document.getElementById("div-checkbox")
 const categoryRepeat = info.map(eventmap => eventmap.category)
@@ -12,17 +11,16 @@ const categorySetArray = [...categorySet]
 const search = document.getElementById("input-search")
 
 
+printCardsPast(info, cards)
 
-printCards(info, cards)
-
-printChecks(categorySetArray, check)
+printChecks(categorySetArray)
 
 
 check.addEventListener('change',(e)=>{
   let searchValue = search[0].value.toLowerCase()
   let arrayFilterSearch = filterSearch(searchValue, info)
   let checksAndSearchFilter = checkboxCategory(arrayFilterSearch)
-  printCards(checksAndSearchFilter, cards)
+  printCardsPast(checksAndSearchFilter, cards)
 })
 
 
@@ -30,7 +28,5 @@ search.addEventListener('keyup', (e)=>{
   let searchValue = search[0].value.toLowerCase()
   let arrayFilterSearch = filterSearch(searchValue, info)
   let checksAndSearchFilter = checkboxCategory(arrayFilterSearch)
-  printCards(checksAndSearchFilter, cards)
+  printCardsPast(checksAndSearchFilter, cards)
 })
-
-
