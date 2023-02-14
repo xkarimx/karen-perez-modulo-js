@@ -1,4 +1,4 @@
-import { printCardsPast, printChecks, checkboxCategory, filterSearch } from "./module/functions"
+import { printCardsPast, printChecks, checkboxCategory, filterSearch } from "./module/functions.js"
 
 const cards = document.getElementById("div-cards")
 let info = data.events
@@ -13,7 +13,7 @@ const search = document.getElementById("input-search")
 
 printCardsPast(info, cards)
 
-printChecks(categorySetArray)
+printChecks(categorySetArray, check)
 
 
 check.addEventListener('change',(e)=>{
