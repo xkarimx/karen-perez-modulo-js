@@ -50,90 +50,55 @@
             <h1 class="position-absolute top-50 start-50 translate-middle w-75 text-center">Stats</h1>
             <img src="https://cdn.buildmyplays.com/wp-content/uploads/2022/04/mind-blowing-instagram-marketing-stats-social.png" class="img-fluid" style="width: 100rem; height: 15rem;" alt="event">
           </section> 
-          <div class="d-flex justify-content-center align-items-center m-4">
-                <table>
-                    <thead>
-                        <tr class="max">
-                            <th colspan="3">Events Statistic</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Events whith the highest porcentage of attendance</th>
-                            <th>Events whit the lowest porcentage of attendance</th>
-                            <th>Events whit larger capacity</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr class="max">
-                            <th colspan="3">Upcoming events statistic by category</th>
-                        </tr>
-                        <tr>
-                            <th>Categories</th>
-                            <th>Revenues</th>
-                            <th>Porcentage of attendance</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr class="max">
-                            <th colspan="3">Past events stastitic by category</th>
-                        </tr>
-                        <tr>
-                            <th>Categories</th>
-                            <th>Revenues</th>
-                            <th>Porcentage of attendance</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                        <tr>
-                            <th>-</th>
-                            <th>-</th>
-                            <th>-</th>
-                        </tr>
-                    </tbody>
-                </table>
-          </div>
+          <div class=" tabled-flex justify-content-center m-auto pt-2"
+          style="width: 70%;">
+            <table class="table table-bordered border-primary m-3  bg-white text-center">
+                <thead>
+                    <tr class="title fs-4">
+                        <th colspan="3">Event statistics</th>
+                    </tr>
+                    <tr>
+                        <th>Events with the highest percentage of attendance</th>
+                        <th>Events with the lowest percentage of attendance</th>
+                        <th>Event with larger capacity</th>
+                    </tr>
+                </thead>
+                <tbody id="event-statistics">
+    
+                </tbody>
+            </table>
+            <table class="table table-bordered border-primary m-3 bg-white text-center">
+                <thead>
+                    <tr class="title fs-4">
+                        <th colspan="3">Upcoming events statistics by category</th>
+                    </tr>
+                    <tr>
+                        <th class="fs-5">Category</th>
+                        <th class="fs-5">Revenues</th>
+                        <th class="fs-5">Percentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="upcoming-statistics">
+    
+                </tbody>
+            </table>
+            <table class="table table-bordered border-primary m-3 bg-white text-center">
+                <thead>
+                    <tr class="title fs-4">
+                        <th colspan="3">Past events statistic by category</th>
+                    </tr>
+                    <tr>
+                        <th class="fs-5">Category</th>
+                        <th class="fs-5">Revenues</th>
+                        <th class="fs-5">Percentage of attendance</th>
+                    </tr>
+                </thead>
+                <tbody id="past-statistics">
+                  
+                </tbody>
+            </table>
+        </div>
     </main>
-
-
-
-
-
-
     <footer class="d-flex justify-content-between align-items-center">
         <div class="d-flex ms-4 gap-3">
           <a href="https://instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="palevioletred" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -151,5 +116,6 @@
         </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script type="module" src="./asetts/scripts/stats.js"></script>
 </body>
 </html>

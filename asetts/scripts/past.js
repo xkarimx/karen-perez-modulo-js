@@ -1,32 +1,40 @@
 import { printCardsPast, printChecks, checkboxCategory, filterSearch } from "./module/functions.js"
 
 const cards = document.getElementById("div-cards")
-let info = data.events
-
 const check = document.getElementById("div-checkbox")
-const categoryRepeat = info.map(eventmap => eventmap.category)
-const categorySet = new Set (categoryRepeat)
-const categorySetArray = [...categorySet]
-
 const search = document.getElementById("input-search")
 
 
-printCardsPast(info, cards)
+let info;
+let date;
+fetch("https://mindhub-xj03.onrender.com/api/amazing")
+        .then(response => response.json())
+        .then((data) => {
+          info = data.events
+          date = data.currentDate
+          let filterDate = info.filter(dates => dates.date < data.currentDate)
+          printCardsPast(filterDate, cards, date)
+          const categoryRepeat = filterDate.map(eventmap => eventmap.category)
+          const categorySet = new Set (categoryRepeat)
+          const categorySetArray = [...categorySet]
+          printChecks(categorySetArray, check)
+        })
+        .catch(err => console.log(err))
 
-printChecks(categorySetArray, check)
 
 
-check.addEventListener('change',(e)=>{
-  let searchValue = search[0].value.toLowerCase()
-  let arrayFilterSearch = filterSearch(searchValue, info)
-  let checksAndSearchFilter = checkboxCategory(arrayFilterSearch)
-  printCardsPast(checksAndSearchFilter, cards)
-})
+        check.addEventListener('change',(e)=>{
+          let searchValue = search[0].value.toLowerCase()
+          let arrayFilterSearch = filterSearch(searchValue, info)
+          let checksAndSearchFilter = checkboxCategory(arrayFilterSearch)
+          printCardsPast(checksAndSearchFilter, cards, date)
+        })
+        
+        search.addEventListener('keyup', (e)=>{
+          let searchValue = search[0].value.toLowerCase()
+          let arrayFilterSearch = filterSearch(searchValue, info)
+          let checksAndSearchFilter = checkboxCategory(arrayFilterSearch)
+          printCardsPast(checksAndSearchFilter, cards, date)
+        })
 
 
-search.addEventListener('keyup', (e)=>{
-  let searchValue = search[0].value.toLowerCase()
-  let arrayFilterSearch = filterSearch(searchValue, info)
-  let checksAndSearchFilter = checkboxCategory(arrayFilterSearch)
-  printCardsPast(checksAndSearchFilter, cards)
-})
