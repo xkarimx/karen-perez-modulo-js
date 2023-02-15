@@ -19,6 +19,7 @@ fetch("https://mindhub-xj03.onrender.com/api/amazing")
         })
         .catch(err => console.log(err))
 
+        
         check.addEventListener('change',(e)=>{
           let searchValue = search[0].value.toLowerCase()
           let arrayFilterSearch = filterSearch(searchValue, info)
